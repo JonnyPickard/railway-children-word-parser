@@ -21,9 +21,21 @@ const countWords = (wordArr) => {
   return wordsObj;
 };
 
+const parseBook = (text) => {
+  const textArr = splitString(text);
+  const wordsObj = countWords(textArr);
+
+  return wordsObj;
+};
+
 if (process.env.NODE_ENV === 'test') {
   module.exports = {
     splitString,
     countWords,
+    parseBook,
+  };
+} else {
+  module.exports = {
+    parseBook,
   };
 }
