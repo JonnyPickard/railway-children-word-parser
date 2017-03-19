@@ -1,9 +1,9 @@
 process.env.NODE_ENV = 'test';
 
 const test = require('tape');
-const { splitString } = require('../book_parser');
-const { countWords } = require('../book_parser');
-const { parseBook } = require('../book_parser');
+const { splitString } = require('../src/book_parser');
+const { countWords } = require('../src/book_parser');
+const { parseBook } = require('../src/book_parser');
 
 test('#splitString, creates array of all words in the text', (t) => {
   const testString = 'They were not railway children to begin with.';

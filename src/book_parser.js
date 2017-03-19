@@ -1,3 +1,5 @@
+const bookText = require('./railway_children_text');
+
 const splitString = (text) => {
   const textArr = text
     .replace('.', '')
@@ -39,3 +41,5 @@ if (process.env.NODE_ENV === 'test') {
     parseBook,
   };
 }
+
+console.log(parseBook(bookText));
