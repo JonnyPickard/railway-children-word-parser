@@ -30,16 +30,6 @@ const parseBook = (text) => {
   return wordsObj;
 };
 
-if (process.env.NODE_ENV === 'test') {
-  module.exports = {
-    splitString,
-    countWords,
-    parseBook,
-  };
-} else {
-  module.exports = {
-    parseBook,
-  };
-}
+module.exports = { parseBook };
 
 console.log(parseBook(bookText));
